@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div id="app">
+        <div id="start">
+            <h1>Bem Vindo ao Quiz</h1>
+            <input type="text" id="username" placeholder="Digite seu nome" />
+            <button onclick="startQuiz()">Iniciar</button>
+        </div>
+        <div id="quiz" style="display: none;">
+            <h1>Questões</h1>
+            <div id="question-container"></div>
+            <button onclick="nextQuestion()">Próxima</button>
+        </div>
+        <div id="result" style="display: none;">
+            <h1>Quiz Completo</h1>
+            <div id="score"></div>
+            <br>
+            <button onclick="viewRankings()">Ver Ranking</button>
+        </div>
+        <div id="rankings" style="display: none;">
+            <h1>Rankings</h1>
+            <ul id="rankings-list"></ul>
+            <button onclick="restartQuiz()">Refazer Quiz</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
